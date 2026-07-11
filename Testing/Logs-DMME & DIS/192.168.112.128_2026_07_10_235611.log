@@ -1,0 +1,20 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.10 23:56:11 =~=~=~=~=~=~=~=~=~=~=~=
+
+VPC-DMME-01> 
+VPC-DMME-01> ping 10.10.40.10
+
+10.10.40.10 icmp_seq=1 timeout
+84 bytes from 10.10.40.10 icmp_seq=2 ttl=63 time=31.539 ms
+84 bytes from 10.10.40.10 icmp_seq=3 ttl=63 time=44.143 ms
+84 bytes from 10.10.40.10 icmp_seq=4 ttl=63 time=24.560 ms
+84 bytes from 10.10.40.10 icmp_seq=5 ttl=63 time=20.732 ms
+
+VPC-DMME-01> ping 10.10.40.10
+
+84 bytes from 10.10.40.10 icmp_seq=1 ttl=63 time=23.551 ms
+84 bytes from 10.10.40.10 icmp_seq=2 ttl=63 time=20.846 ms
+84 bytes from 10.10.40.10 icmp_seq=3 ttl=63 time=20.109 ms
+84 bytes from 10.10.40.10 icmp_seq=4 ttl=63 time=39.921 ms
+84 bytes from 10.10.40.10 icmp_seq=5 ttl=63 time=45.046 ms
+
+VPC-DMME-01> 

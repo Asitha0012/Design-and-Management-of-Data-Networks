@@ -1,0 +1,21 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.11 00:33:45 =~=~=~=~=~=~=~=~=~=~=~=
+
+VPC(VM-AUTO)> 
+VPC(VM-AUTO)> ping 10.99.99.23
+
+10.99.99.23 icmp_seq=1 timeout
+84 bytes from 10.99.99.23 icmp_seq=2 ttl=254 time=29.782 ms
+84 bytes from 10.99.99.23 icmp_seq=3 ttl=254 time=59.068 ms
+84 bytes from 10.99.99.23 icmp_seq=4 ttl=254 time=39.407 ms
+84 bytes from 10.99.99.23 icmp_seq=5 ttl=254 time=46.089 ms
+
+VPC(VM-AUTO)> ping 10.99.99.23
+
+84 bytes from 10.99.99.23 icmp_seq=1 ttl=254 time=23.873 ms
+84 bytes from 10.99.99.23 icmp_seq=2 ttl=254 time=37.989 ms
+84 bytes from 10.99.99.23 icmp_seq=3 ttl=254 time=24.431 ms
+84 bytes from 10.99.99.23 icmp_seq=4 ttl=254 time=21.856 ms
+84 bytes from 10.99.99.23 icmp_seq=5 ttl=254 time=38.322 ms
+
+VPC(VM-AUTO)> 
+VPC(VM-AUTO)> 

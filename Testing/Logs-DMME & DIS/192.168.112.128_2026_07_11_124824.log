@@ -1,0 +1,28 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.11 12:48:24 =~=~=~=~=~=~=~=~=~=~=~=
+/ # [J/ # [J/ # [J/ # [J/ # [J/ # [J/ # [J/ # [J/ # [J/ # [J/ # [J
+/ # [6n
+/ # [6nip addr add 10.10.40.20/24 dev eth0
+/ # [6nip link set eth0 up
+/ # [6nip route add default via 10.10.40.1
+/ # [6n
+/ # [6n
+/ # [6nping -c 3 10.10.40.1
+PING 10.10.40.1 (10.10.40.1): 56 data bytes
+64 bytes from 10.10.40.1: seq=0 ttl=255 time=101.014 ms
+64 bytes from 10.10.40.1: seq=1 ttl=255 time=23.498 ms
+64 bytes from 10.10.40.1: seq=2 ttl=255 time=12.874 ms
+
+--- 10.10.40.1 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 12.874/45.795/101.014 ms
+/ # [6nping -c 3 10.99.99.23
+PING 10.99.99.23 (10.99.99.23): 56 data bytes
+64 bytes from 10.99.99.23: seq=0 ttl=254 time=31.483 ms
+64 bytes from 10.99.99.23: seq=1 ttl=254 time=38.943 ms
+64 bytes from 10.99.99.23: seq=2 ttl=254 time=29.017 ms
+
+--- 10.99.99.23 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 29.017/33.147/38.943 ms
+/ # [6n
+/ # [6n

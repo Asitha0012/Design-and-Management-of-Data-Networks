@@ -1,0 +1,36 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.11 00:56:33 =~=~=~=~=~=~=~=~=~=~=~=
+
+R-CORE#
+R-CORE#
+R-CORE#
+R-CORE#enable
+R-CORE#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R-CORE(config)#ip domain-name campus.local
+R-CORE(config)#username admin privilege 15 password adminpass
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+R-CORE(config)#crypto key generate rsa modulus 2048
+The name for the keys will be: R-CORE.campus.local
+
+% The key modulus size is 2048 bits
+% Generating 2048 bit RSA keys, keys will be non-exportable...
+*Jul 10 19:25:08.675: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+[OK] (elapsed time was 3 seconds)
+
+R-CORE(config)#line vty 0 4
+R-CORE(config-line)# login local
+R-CORE(config-line)# transport input ssh
+R-CORE(config-line)#end
+R-CORE#write memory
+*Jul 10 19:25:11.229: %SSH-5-ENABLED: SSH 1.99 has been enabled
+*Jul 10 19:25:11.458: %SYS-5-CONFIG_I: Configured from console by console
+R-CORE#write memory
+Building configuration...
+
+  [OK]
+*Jul 10 19:25:20.505: %GRUB-5-CONFIG_WRITING: GRUB configuration is being updated on disk. Please wait...
+R-CORE#
+*Jul 10 19:25:22.132: %GRUB-5-CONFIG_WRITTEN: GRUB configuration was written to disk successfully.
+R-CORE#
+R-CORE#
+R-CORE#

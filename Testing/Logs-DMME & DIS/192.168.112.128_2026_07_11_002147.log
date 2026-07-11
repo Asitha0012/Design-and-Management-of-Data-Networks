@@ -1,0 +1,24 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.11 00:21:47 =~=~=~=~=~=~=~=~=~=~=~=
+
+SW-D-DMME>
+SW-D-DMME>
+SW-D-DMME>
+SW-D-DMME>show interfaces trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Gi0/0       on               802.1q         trunking      100
+Gi0/1       on               802.1q         trunking      100
+
+Port        Vlans allowed on trunk
+Gi0/0       10,20,30,40,99
+Gi0/1       10,20,30,40,99
+
+Port        Vlans allowed and active in management domain
+Gi0/0       10,20,30,40,99
+Gi0/1       10,20,30,40,99
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gi0/0       10,20,30,40,99
+Gi0/1       10,20,30,40,99
+SW-D-DMME>
+SW-D-DMME>

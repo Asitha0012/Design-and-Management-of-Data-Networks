@@ -1,0 +1,15 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.11 01:03:00 =~=~=~=~=~=~=~=~=~=~=~=
+
+VPC(VM-AUTO)> 
+VPC(VM-AUTO)> ssh admin@10.99.99.23
+Bad command: "ssh admin@10.99.99.23". Use ? for help.
+
+VPC(VM-AUTO)> en
+Bad command: "en". Use ? for help.
+
+VPC(VM-AUTO)> 
+VPC(VM-AUTO)> ssh admin@10.99.99.23
+Bad command: "ssh admin@10.99.99.23". Use ? for help.
+
+VPC(VM-AUTO)> 
+VPC(VM-AUTO)> 

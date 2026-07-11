@@ -1,0 +1,85 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.11 01:00:50 =~=~=~=~=~=~=~=~=~=~=~=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SW-A-DIS con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+IOSv - Cisco Systems Confidential -
+
+Supplemental End User License Restrictions
+
+This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+
+SW-A-DIS>
+SW-A-DIS>
+SW-A-DIS>
+SW-A-DIS>enable
+SW-A-DIS#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW-A-DIS(config)#ip domain-name campus.local
+SW-A-DIS(config)#username admin privilege 15 password adminpass
+SW-A-DIS(config)#crypto key generate rsa modulus 2048
+The name for the keys will be: SW-A-DIS.campus.local
+
+% The key modulus size is 2048 bits
+% Generating 2048 bit RSA keys, keys will be non-exportable...
+[OK] (elapsed time was 2 seconds)
+
+SW-A-DIS(config)#line vty 0 4
+SW-A-DIS(config-line)# login local
+SW-A-DIS(config-line)# transport input ssh
+SW-A-DIS(config-line)#exit
+SW-A-DIS(config)#line vty 5 15
+SW-A-DIS(config-line)# login local
+SW-A-DIS(config-line)# transport input ssh
+SW-A-DIS(config-line)#end
+SW-A-DIS#write memory
+*Jul 10 19:26:02.283: %SYS-5-CONFIG_I: Configured from console by console
+Building configuration...
+Compressed configuration from 4212 bytes to 2271 bytes[OK]
+SW-A-DIS#
+*Jul 10 19:26:11.782: %GRUB-5-CONFIG_WRITING: GRUB configuration is being updated on disk. Please wait...
+*Jul 10 19:26:12.649: %GRUB-5-CONFIG_WRITTEN: GRUB configuration was written to disk successfully.
+SW-A-DIS#
+SW-A-DIS#
+SW-A-DIS#

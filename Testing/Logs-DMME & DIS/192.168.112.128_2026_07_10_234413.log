@@ -1,0 +1,48 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.10 23:44:13 =~=~=~=~=~=~=~=~=~=~=~=
+
+
+
+
+SW-D-DMME con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+IOSv - Cisco Systems Confidential -
+
+Supplemental End User License Restrictions
+
+This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+
+SW-D-DMME>
+SW-D-DMME>
+SW-D-DMME>show b vl
+SW-D-DMME>show vlan br
+SW-D-DMME>show vlan brief 
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Gi0/2, Gi0/3, Gi1/0, Gi1/1
+                                                Gi1/2, Gi1/3, Gi2/0, Gi2/1
+                                                Gi2/2, Gi2/3, Gi3/0, Gi3/1
+                                                Gi3/2, Gi3/3
+10   VLAN0010                         active    
+20   VLAN0020                         active    
+30   VLAN0030                         active    
+40   VLAN0040                         active    
+99   VLAN0099                         active    
+100  VLAN0100                         active    
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 
+SW-D-DMME>
+SW-D-DMME>

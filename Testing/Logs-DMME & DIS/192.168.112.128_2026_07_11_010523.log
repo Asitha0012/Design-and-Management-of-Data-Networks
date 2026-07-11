@@ -1,0 +1,30 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.11 01:05:23 =~=~=~=~=~=~=~=~=~=~=~=
+
+SW-CORE#
+SW-CORE#ssh -l admin 10.99.99.23
+
+IOSv - Cisco Systems Confidential -
+
+Supplemental End User License Restrictions
+
+This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+
+Password: 
+
+IOSv - Cisco Systems Confidential -
+
+Supplemental End User License Restrictions
+
+This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+
+SW-A-DMME#
+SW-A-DMME#
+SW-A-DMME#ex
+
+[Connection to 10.99.99.23 closed by foreign host]
+SW-CORE#
+SW-CORE#

@@ -1,0 +1,23 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.10 23:49:13 =~=~=~=~=~=~=~=~=~=~=~=
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R-CORE#
+R-CORE#
+R-CORE#show ip os
+R-CORE#show ip ospf nei
+R-CORE#show ip ospf neighbor 
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+1.1.1.1           1   FULL/BDR        00:00:31    10.0.0.6        GigabitEthernet0/1
+3.3.3.3           1   FULL/DR         00:00:36    10.0.0.1        GigabitEthernet0/0
+R-CORE#
+R-CORE#
+R-CORE#
+R-CORE#

@@ -1,0 +1,34 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.10 23:46:13 =~=~=~=~=~=~=~=~=~=~=~=
+
+SW-CORE>
+SW-CORE>
+SW-CORE>show int 
+SW-CORE>show int 
+SW-CORE>show inter 
+SW-CORE>show interf 
+SW-CORE>show interface trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Gi0/1       on               802.1q         trunking      100
+Gi0/2       on               802.1q         trunking      100
+Gi0/3       on               802.1q         trunking      100
+Gi1/0       on               802.1q         trunking      100
+
+Port        Vlans allowed on trunk
+Gi0/1       10,20,30,40,99
+Gi0/2       10,20,30,40,99
+Gi0/3       10,20,30,40,99
+Gi1/0       10,20,30,40,99
+
+Port        Vlans allowed and active in management domain
+Gi0/1       10,20,30,40,99
+Gi0/2       10,20,30,40,99
+Gi0/3       10,20,30,40,99
+Gi1/0       10,20,30,40,99
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gi0/1       10,20,30,40,99
+Gi0/2       10,20,30,40,99
+Gi0/3       10,20,30,40,99
+Gi1/0       10,20,30,40,99
+SW-CORE>

@@ -1,0 +1,44 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.10 23:57:48 =~=~=~=~=~=~=~=~=~=~=~=
+
+VPC(VM-AUTO)> 
+VPC(VM-AUTO)> ping 10.99.99.23
+
+10.99.99.23 icmp_seq=1 timeout
+10.99.99.23 icmp_seq=2 timeout
+10.99.99.23 icmp_seq=3 timeout
+10.99.99.23 icmp_seq=4 timeout
+10.99.99.23 icmp_seq=5 timeout
+
+VPC(VM-AUTO)> shp ow ip| ?  ?         ping 10.99.99.23
+
+10.99.99.23 icmp_seq=1 timeout
+10.99.99.23 icmp_seq=2 timeout
+10.99.99.23 icmp_seq=3 timeout
+10.99.99.23 icmp_seq=4 timeout
+10.99.99.23 icmp_seq=5 timeout
+
+VPC(VM-AUTO)> ping 10.10.40.1
+
+84 bytes from 10.10.40.1 icmp_seq=1 ttl=255 time=28.404 ms
+84 bytes from 10.10.40.1 icmp_seq=2 ttl=255 time=41.215 ms
+84 bytes from 10.10.40.1 icmp_seq=3 ttl=255 time=13.862 ms
+84 bytes from 10.10.40.1 icmp_seq=4 ttl=255 time=25.986 ms
+84 bytes from 10.10.40.1 icmp_seq=5 ttl=255 time=11.283 ms
+
+VPC(VM-AUTO)> ping 10.99.99.1
+
+84 bytes from 10.99.99.1 icmp_seq=1 ttl=255 time=15.377 ms
+84 bytes from 10.99.99.1 icmp_seq=2 ttl=255 time=20.308 ms
+84 bytes from 10.99.99.1 icmp_seq=3 ttl=255 time=13.880 ms
+84 bytes from 10.99.99.1 icmp_seq=4 ttl=255 time=9.724 ms
+84 bytes from 10.99.99.1 icmp_seq=5 ttl=255 time=14.128 ms
+
+VPC(VM-AUTO)> ping 10.99.99.13
+
+10.99.99.13 icmp_seq=1 timeout
+10.99.99.13 icmp_seq=2 timeout
+10.99.99.13 icmp_seq=3 timeout
+10.99.99.13 icmp_seq=4 timeout
+10.99.99.13 icmp_seq=5 timeout
+
+VPC(VM-AUTO)> 

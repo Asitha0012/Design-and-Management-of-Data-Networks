@@ -1,0 +1,95 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.11 00:59:41 =~=~=~=~=~=~=~=~=~=~=~=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SW-A-DMME con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+
+IOSv - Cisco Systems Confidential -
+
+Supplemental End User License Restrictions
+
+This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+
+SW-A-DMME>
+SW-A-DMME>
+SW-A-DMME>enable
+SW-A-DMME#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW-A-DMME(config)#ip domain-name campus.local
+SW-A-DMME(config)#username admin privilege 15 password adminpass
+SW-A-DMME(config)#crypto key generate rsa modulus 2048
+The name for the keys will be: SW-A-DMME.campus.local
+
+% The key modulus size is 2048 bits
+% Generating 2048 bit RSA keys, keys will be non-exportable...
+[OK] (elapsed time was 2 seconds)
+
+SW-A-DMME(config)#line vty 0 4
+SW-A-DMME(config-line)# login local
+SW-A-DMME(config-line)# transport input ssh
+SW-A-DMME(config-line)#exit
+SW-A-DMME(config)#line vty 5 15
+SW-A-DMME(config-line)# login local
+SW-A-DMME(config-line)# transport input ssh
+SW-A-DMME(config-line)#end
+SW-A-DMME#write memory
+*Jul 10 19:24:14.927: %SYS-5-CONFIG_I: Configured from console by console
+Building configuration...
+Compressed configuration from 3725 bytes to 2023 bytes[OK]
+SW-A-DMME#
+*Jul 10 19:24:32.977: %GRUB-5-CONFIG_WRITING: GRUB configuration is being updated on disk. Please wait...
+*Jul 10 19:24:33.890: %GRUB-5-CONFIG_WRITTEN: GRUB configuration was written to disk successfully.
+SW-A-DMME#
+SW-A-DMME#
+SW-A-DMME#

@@ -1,0 +1,59 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.11 12:01:09 =~=~=~=~=~=~=~=~=~=~=~=
+/ # [J/ # [J/ # [J/ # [J/ # [J/ # [J/ # [J/ # [J/ # [J/ # [J/ # [J
+/ # [6n
+/ # ip addr add 10.10.40.10/24 dev eth0
+/ # [6nip link set eth0 up
+/ # [6nip route add default via 10.10.40.1
+/ # [6n
+/ # [6n
+/ # [6ncat /etc/network/interfaces
+auto eth0
+iface eth0 inet static
+    address 10.10.40.10
+    netmask 255.255.255.0
+    gateway 10.10.40.1
+    up echo "nameserver 8.8.8.8" > /etc/resolv.conf
+/ # [6nifup eth0
+ip: RTNETLINK answers: File exists
+ip: RTNETLINK answers: File exists
+/ # [6nifup eth0[J[J[J[J[J[J[J[J[Jip addr show eth0
+7: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN qlen 1000
+    link/ether 02:42:8c:41:b9:00 brd ff:ff:ff:ff:ff:ff
+    inet 10.10.40.10/24 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:8cff:fe41:b900/64 scope link 
+       valid_lft forever preferred_lft forever
+/ # [6nping -c 5 10.10.40.1
+PING 10.10.40.1 (10.10.40.1): 56 data bytes
+64 bytes from 10.10.40.1: seq=0 ttl=255 time=52.316 ms
+64 bytes from 10.10.40.1: seq=1 ttl=255 time=23.101 ms
+64 bytes from 10.10.40.1: seq=2 ttl=255 time=12.216 ms
+64 bytes from 10.10.40.1: seq=3 ttl=255 time=12.772 ms
+64 bytes from 10.10.40.1: seq=4 ttl=255 time=16.642 ms
+
+--- 10.10.40.1 ping statistics ---
+5 packets transmitted, 5 packets received, 0% packet loss
+round-trip min/avg/max = 12.216/23.409/52.316 ms
+/ # [6nping -c 5 10.99.99.23
+PING 10.99.99.23 (10.99.99.23): 56 data bytes
+64 bytes from 10.99.99.23: seq=2 ttl=254 time=34.388 ms
+64 bytes from 10.99.99.23: seq=3 ttl=254 time=27.842 ms
+64 bytes from 10.99.99.23: seq=4 ttl=254 time=26.313 ms
+
+--- 10.99.99.23 ping statistics ---
+5 packets transmitted, 3 packets received, 40% packet loss
+round-trip min/avg/max = 26.313/29.514/34.388 ms
+/ # [6n^C
+
+/ # [6nping -c 5 10.99.99.23
+PING 10.99.99.23 (10.99.99.23): 56 data bytes
+64 bytes from 10.99.99.23: seq=0 ttl=254 time=483.088 ms
+64 bytes from 10.99.99.23: seq=1 ttl=254 time=33.600 ms
+64 bytes from 10.99.99.23: seq=2 ttl=254 time=77.922 ms
+64 bytes from 10.99.99.23: seq=3 ttl=254 time=31.083 ms
+64 bytes from 10.99.99.23: seq=4 ttl=254 time=21.931 ms
+
+--- 10.99.99.23 ping statistics ---
+5 packets transmitted, 5 packets received, 0% packet loss
+round-trip min/avg/max = 21.931/129.524/483.088 ms
+/ # [6n

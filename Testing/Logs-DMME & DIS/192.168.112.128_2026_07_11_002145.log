@@ -1,0 +1,44 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.11 00:21:45 =~=~=~=~=~=~=~=~=~=~=~=
+
+SW-A-DMME#
+SW-A-DMME#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0     unassigned      YES unset  up                    up      
+GigabitEthernet0/1     unassigned      YES unset  down                  down    
+GigabitEthernet0/2     unassigned      YES unset  down                  down    
+GigabitEthernet0/3     unassigned      YES unset  down                  down    
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet1/1     unassigned      YES unset  up                    up      
+GigabitEthernet1/2     unassigned      YES unset  down                  down    
+GigabitEthernet1/3     unassigned      YES unset  down                  down    
+GigabitEthernet2/0     unassigned      YES unset  down                  down    
+GigabitEthernet2/1     unassigned      YES unset  down                  down    
+GigabitEthernet2/2     unassigned      YES unset  down                  down    
+GigabitEthernet2/3     unassigned      YES unset  down                  down    
+GigabitEthernet3/0     unassigned      YES unset  down                  down    
+GigabitEthernet3/1     unassigned      YES unset  down                  down    
+GigabitEthernet3/2     unassigned      YES unset  down                  down    
+GigabitEthernet3/3     unassigned      YES unset  down                  down    
+Vlan99                 10.99.99.23     YES NVRAM  up                    up      
+SW-A-DMME#
+SW-A-DMME#show interfaces trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Gi0/0       on               802.1q         trunking      100
+
+Port        Vlans allowed on trunk
+Gi0/0       30,99
+
+Port        Vlans allowed and active in management domain
+Gi0/0       30,99
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gi0/0       30,99
+SW-A-DMME#
+SW-A-DMME#ping 10.99.99.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.99.99.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 10/16/27 ms
+SW-A-DMME#
+SW-A-DMME#
