@@ -1,0 +1,44 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.12 23:25:11 =~=~=~=~=~=~=~=~=~=~=~=
+
+IOSv - Cisco Systems Confidential -
+
+Supplemental End User License Restrictions
+
+This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+
+SW-A-DEIE>
+SW-A-DEIE>
+SW-A-DEIE>enable
+SW-A-DEIE#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW-A-DEIE(config)#ip domain-name campus.local
+SW-A-DEIE(config)#username admin privilege 15 password adminpass
+SW-A-DEIE(config)#crypto key generate rsa modulus 2048
+The name for the keys will be: SW-A-DEIE.campus.local
+
+% The key modulus size is 2048 bits
+% Generating 2048 bit RSA keys, keys will be non-exportable...
+[OK] (elapsed time was 2 seconds)
+
+SW-A-DEIE(config)#line vty 0 4
+SW-A-DEIE(config-line)# login local
+SW-A-DEIE(config-line)# transport input ssh
+SW-A-DEIE(config-line)#exit
+SW-A-DEIE(config)#line vty 5 15
+SW-A-DEIE(config-line)# login local
+SW-A-DEIE(config-line)# transport input ssh
+SW-A-DEIE(config-line)#end
+SW-A-DEIE#write memory
+Building configuration...
+
+*Jul 12 17:46:47.093: %SYS-5-CONFIG_I: Configured from console by consoleCompressed configuration from 3689 bytes to 2001 bytes[OK]
+*Jul 12 17:46:56.748: %GRUB-5-CONFIG_WRITING: GRUB c
+-Traceback= 24191D8z 9605E5z 989BDEz 989900z 98970Dz 985895z 9864CBz 98645Fz 98D928z 98C7A7z 98BC87z 98CDF8z 95B753z 90AFD1z 93F0F3z 93E2A7z - Process "Exec", CPU hog, PC 0x0098D9EB
+onfiguration is being updated on disk. Please wait...
+SW-A-DEIE#
+*Jul 12 17:46:57.879: %GRUB-5-CONFIG_WRITTEN: GRUB configuration was written to disk successfully.
+*Jul 12 17:47:00.265: %SYS-3-CPUHOG: Task is running for (2000)msecs, more than (2000)msecs (0/0),process = Exec.
+SW-A-DEIE#
+SW-A-DEIE#

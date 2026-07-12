@@ -1,0 +1,30 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.12 23:23:31 =~=~=~=~=~=~=~=~=~=~=~=
+enable
+R-EDGE#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R-EDGE(config)#ip domain-name campus.local
+R-EDGE(config)#username admin privilege 15 password adminpass
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+R-EDGE(config)#crypto key generate rsa modulus 2048
+The name for the keys will be: R-EDGE.campus.local
+
+% The key modulus size is 2048 bits
+% Generating 2048 bit RSA keys, keys will be non-exportable...
+*Jul 12 17:45:38.718: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+[OK] (elapsed time was 6 seconds)
+
+R-EDGE(config)#line vty 0 4
+R-EDGE(config-line)# login local
+R-EDGE(config-line)# transport input ssh
+R-EDGE(config-line)#end
+R-EDGE#write memory
+Building configuration...
+
+*Jul 12 17:45:44.724: %SSH-5-ENABLED: SSH 1.99 has been enabled
+*Jul 12 17:45:45.073: %SYS-5-CONFIG_I: Configured from console by console
+  [OK]
+R-EDGE#
+*Jul 12 17:45:52.831: %GRUB-5-CONFIG_WRITING: GRUB configuration is being updated on disk. Please wait...
+R-EDGE#
+*Jul 12 17:45:54.794: %GRUB-5-CONFIG_WRITTEN: GRUB configuration was written to disk successfully.
+R-EDGE#

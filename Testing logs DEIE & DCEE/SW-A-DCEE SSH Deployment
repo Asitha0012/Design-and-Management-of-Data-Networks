@@ -1,0 +1,31 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.12 23:31:12 =~=~=~=~=~=~=~=~=~=~=~=
+enable
+SW-A-DCEE#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW-A-DCEE(config)#ip domain-name campus.local
+SW-A-DCEE(config)#username admin privilege 15 password adminpass
+SW-A-DCEE(config)#crypto key generate rsa modulus 2048
+The name for the keys will be: SW-A-DCEE.campus.local
+
+% The key modulus size is 2048 bits
+% Generating 2048 bit RSA keys, keys will be non-exportable...
+[OK] (elapsed time was 2 seconds)
+
+SW-A-DCEE(config)#line vty 0 4
+SW-A-DCEE(config-line)# login local
+SW-A-DCEE(config-line)# transport input ssh
+SW-A-DCEE(config-line)#exit
+SW-A-DCEE(config)#line vty 5 15
+SW-A-DCEE(config-line)# login local
+SW-A-DCEE(config-line)# transport input ssh
+SW-A-DCEE(config-line)#end
+SW-A-DCEE#write memory
+Building configuration...
+
+*Jul 12 17:51:59.714: %SYS-5-CONFIG_I: Configured from console by consoleCompressed configuration from 3689 bytes to 2004 bytes[OK]
+*Jul 12 17:52:09.210: %GRUB-5-CONFIG_WRITING: GRUB configuration is being updated on disk. Please wait...
+SW-A-DCEE#
+*Jul 12 17:52:10.442: %GRUB-5-CONFIG_WRITTEN: GRUB configuration was written to disk successfully.
+SW-A-DCEE#
+SW-A-DCEE#
+SW-A-DCEE#

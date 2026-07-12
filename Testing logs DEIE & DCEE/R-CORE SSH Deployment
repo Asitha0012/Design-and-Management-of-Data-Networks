@@ -1,0 +1,57 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.12 23:20:46 =~=~=~=~=~=~=~=~=~=~=~=
+^V  enable
+R-CORE#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R-CORE(config)#ip domain-name campus.local
+R-CORE(config)#username admin privilege 15 password adminpass
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+R-CORE(config)#crypto key generate rsa modulus 2048
+The name for the keys will be: R-CORE.campus.local
+
+% The key modulus size is 2048 bits
+% Generating 2048 bit RSA keys, keys will be non-exportable...
+*Jul 12 17:43:10.843: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+[OK] (elapsed time was 8 seconds)
+
+R-CORE(config)#line vty 0 4
+R-CORE(config-line)# login local
+R-CORE(config-line)# transport input ssh
+R-CORE(config-line)#end
+R-CORE#write memory
+Building configuration...
+
+  
+*Jul 12 17:43:19.219: %SSH-5-ENABLED: SSH 1.99 has been enabled
+*Jul 12 17:43:19.468: %SYS-5-CONFIG_I: Configured from console by console[OK]
+R-CORE#enable
+R-CORE#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R-CORE(config)#ip domain-name campus.local
+R-CORE(config)#username admin privilege 15 password adminpass
+ WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+R-CORE(config)#crypto key generate rsa modulus 2048
+% You already have RSA keys defined named R-CORE.campus.local.
+% They will be replaced.
+
+% The key modulus size is 2048 bits
+% Generating 2048 bit RSA keys, keys will be non-exportable...
+*Jul 12 17:43:26.872: %GRUB-5-CONFIG_WRITING: GRUB configuration is being updated on disk. Please wait...
+*Jul 12 17:43:28.977: %GRUB-5-CONFIG_WRITTEN: GRUB configuration was written to disk successfully.
+*Jul 12 17:43:29.407: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 0 password. However, type 0 passwords will soon be deprecated. Migrate to a supported password type
+*Jul 12 17:43:29.589: %SSH-5-DISABLED: SSH 1.99 has been disabled
+[OK] (elapsed time was 8 seconds)
+
+R-CORE(config)#line vty 0 4
+R-CORE(config-line)# login local
+R-CORE(config-line)# transport input ssh
+R-CORE(config-line)#end
+R-CORE#write memory
+Building configuration...
+
+*Jul 12 17:43:37.580: %SSH-5-ENABLED: SSH 1.99 has been enabled
+*Jul 12 17:43:37.815: %SYS-5-CONFIG_I: Configured from console by console[OK]
+R-CORE#
+*Jul 12 17:43:44.408: %GRUB-5-CONFIG_WRITING: GRUB configuration is being updated on disk. Please wait...
+R-CORE#
+*Jul 12 17:43:45.575: %GRUB-5-CONFIG_WRITTEN: GRUB configuration was written to disk successfully.
+R-CORE#
