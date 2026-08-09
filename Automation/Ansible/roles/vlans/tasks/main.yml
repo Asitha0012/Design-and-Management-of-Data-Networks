@@ -1,0 +1,8 @@
+---
+# Role Task: VLAN Management
+# Ensures global common VLANs and host-specific VLANs are present on Cisco IOS devices.
+
+- name: Ensure common and department VLANs exist
+  cisco.ios.ios_vlans:
+    config: "{{ common_vlans + device_vlans }}"
+    state: merged

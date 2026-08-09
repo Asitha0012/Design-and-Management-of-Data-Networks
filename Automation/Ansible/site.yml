@@ -1,0 +1,16 @@
+---
+# Main Playbook: EE8203 Distribution and Access Switches Configuration
+# Orchestrates configuration roles (VLANs, Trunking, Access Ports, STP) across switch groups.
+
+- name: Configure EE8203 distribution and access switches
+  hosts: switches
+  gather_facts: false
+  roles:
+    - vlans
+    - trunking
+    - access_ports
+    - stp
+  post_tasks:
+    - name: Persist configuration to startup-config
+      cisco.ios.ios_config:
+        save_when: modified

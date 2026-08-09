@@ -1,0 +1,20 @@
+# Host-Specific Variables: SW-A-DMME (Access Switch - DMME Department)
+
+# VLAN required on this access switch
+device_vlans:
+  - { vlan_id: 30, name: VLAN_DMME }
+
+# Trunk uplink interface connecting to Distribution Switch
+trunk_interfaces:
+  - name: GigabitEthernet0/0
+    description: "Trunk -> SW-D-DMME"
+    allowed_vlans: [30, 99, 100]
+
+# Access interfaces assigned to DMME department VLAN (VLAN 30)
+access_interfaces:
+  - name: GigabitEthernet1/0
+    description: "VPC-DMME-01"
+    vlan: 30
+  - name: GigabitEthernet1/1
+    description: "VPC-DMME-02"
+    vlan: 30

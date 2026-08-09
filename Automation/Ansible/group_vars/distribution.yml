@@ -1,0 +1,4 @@
+# Group Variables: Distribution Switches
+# BPDU Guard is disabled on distribution switches as trunk ports connect to other switches
+
+portfast_bpduguard: false

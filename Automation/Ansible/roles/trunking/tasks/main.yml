@@ -1,0 +1,17 @@
+---
+# Role Task: Trunking & Layer 2 Interface Configuration
+# Configures 802.1Q trunk mode, native VLAN, and allowed VLAN pruning on uplink interfaces.
+
+- name: Ensure trunk ports are 802.1Q trunks with pruned VLAN lists
+  cisco.ios.ios_l2_interfaces:
+    config:
+      - name: "{{ item.name }}"
+        mode: trunk
+        trunk:
+          encapsulation: dot1q
+          native_vlan: "{{ native_vlan }}"
+          allowed_vlans: "{{ item.allowed_vlans | map('string') | list }}"
+    state: merged
+  loop: "{{ trunk_interfaces | default([]) }}"
+  loop_control:
+    label: "{{ item.name }}"

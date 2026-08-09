@@ -1,0 +1,29 @@
+# Host-Specific Variables: SW-A-DIS (Access Switch - Data & Infrastructure Services)
+
+# VLAN required on this services access switch
+device_vlans:
+  - { vlan_id: 40, name: VLAN_DIS }
+
+# Trunk uplink interface connecting to Core Switch
+trunk_interfaces:
+  - name: GigabitEthernet0/0
+    description: "Trunk -> SW-CORE"
+    allowed_vlans: [40, 99, 100]
+
+# Access interfaces for automation, Zabbix monitoring, DHCP, and DIS VPCs
+access_interfaces:
+  - name: GigabitEthernet1/0
+    description: "VM-AUTO"
+    vlan: 99
+  - name: GigabitEthernet1/1
+    description: "VM-ZABBIX"
+    vlan: 40
+  - name: GigabitEthernet1/2
+    description: "VM-DHCP"
+    vlan: 40
+  - name: GigabitEthernet2/0
+    description: "VPC-DIS-01"
+    vlan: 40
+  - name: GigabitEthernet2/1
+    description: "VPC-DIS-02"
+    vlan: 40

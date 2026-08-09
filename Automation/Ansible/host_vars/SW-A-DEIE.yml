@@ -1,0 +1,20 @@
+# Host-Specific Variables: SW-A-DEIE (Access Switch - DEIE Department)
+
+# VLAN required on this access switch
+device_vlans:
+  - { vlan_id: 10, name: VLAN_DEIE }
+
+# Trunk uplink interface connecting to Distribution Switch
+trunk_interfaces:
+  - name: GigabitEthernet0/0
+    description: "Trunk -> SW-D-DEIE"
+    allowed_vlans: [10, 99, 100]
+
+# Access interfaces assigned to DEIE department VLAN (VLAN 10)
+access_interfaces:
+  - name: GigabitEthernet1/0
+    description: "VPC-DEIE-01"
+    vlan: 10
+  - name: GigabitEthernet1/1
+    description: "VPC-DEIE-02"
+    vlan: 10

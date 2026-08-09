@@ -1,0 +1,15 @@
+---
+# Role Task: Access Port Interface Configuration
+# Sets port mode to access and assigns configured access interfaces to their target VLANs.
+
+- name: Ensure access ports are assigned to correct VLANs
+  cisco.ios.ios_l2_interfaces:
+    config:
+      - name: "{{ item.name }}"
+        mode: access
+        access:
+          vlan: "{{ item.vlan | string }}"
+    state: merged
+  loop: "{{ access_interfaces | default([]) }}"
+  loop_control:
+    label: "{{ item.name }}"

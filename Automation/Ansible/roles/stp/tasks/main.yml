@@ -1,0 +1,17 @@
+---
+# Role Task: Spanning Tree Protocol (STP) & Security Configuration
+# Enforces Rapid-PVST STP mode and enables PortFast BPDU Guard on host-facing access interfaces.
+
+- name: Ensure rapid-PVST spanning-tree mode
+  cisco.ios.ios_config:
+    lines:
+      - spanning-tree mode rapid-pvst
+
+- name: Enable PortFast BPDU guard on host-facing ports
+  cisco.ios.ios_config:
+    parents: "interface {{ item.name }}"
+    lines:
+      - spanning-tree portfast edge
+      - spanning-tree bpduguard enable
+  loop: "{{ access_interfaces | default([]) }}"
+  when: portfast_bpduguard | default(false)

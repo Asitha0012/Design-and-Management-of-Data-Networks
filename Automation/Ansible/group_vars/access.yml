@@ -1,0 +1,4 @@
+# Group Variables: Access Switches
+# BPDU Guard is enabled on access switches to protect end-user access ports against topology loops
+
+portfast_bpduguard: true

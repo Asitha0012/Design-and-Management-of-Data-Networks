@@ -1,0 +1,20 @@
+# Host-Specific Variables: SW-D-DCEE (Distribution Switch - DCEE Department)
+
+# Department-specific VLAN definitions carried across distribution switches
+device_vlans:
+  - { vlan_id: 10, name: VLAN_DEIE }
+  - { vlan_id: 20, name: VLAN_DCEE }
+  - { vlan_id: 30, name: VLAN_DMME }
+  - { vlan_id: 40, name: VLAN_DIS }
+
+# Trunk port configuration connecting to Core Switch and DCEE Access Switch
+trunk_interfaces:
+  - name: GigabitEthernet0/0
+    description: "Trunk -> SW-CORE"
+    allowed_vlans: [10, 20, 30, 40, 99, 100]
+  - name: GigabitEthernet0/1
+    description: "Trunk -> SW-A-DCEE"
+    allowed_vlans: [10, 20, 30, 40, 99, 100]
+
+# No direct end-user access interfaces on distribution switches
+access_interfaces: []
