@@ -1,0 +1,110 @@
+# inventory.yaml - Network device inventory and environment parameters.
+
+# Default connection parameters for Netmiko SSH sessions
+defaults:
+  device_type: cisco_ios
+  username: admin
+  password: adminpass
+  secret: adminpass
+  conn_timeout: 30
+
+# Global SNMP community, trap server, location, and trap event specifications
+snmp:
+  community: EE8203ro
+  trap_host: 10.10.40.10
+  location: FoE-UoR-Hapugala
+  contact: ee8203-team@foe.uor.lk
+  traps: snmp linkdown linkup coldstart
+
+# Standard Access Control List configuration for Virtual Terminal (VTY) management access
+router_acls:
+  vty_acl_name: ACL_VTY_MGMT
+  vty_acl_permits:
+    - "permit 10.99.99.0 0.0.0.255"
+
+# Core and Edge Router definitions including interfaces, OSPF routing, and NAT rules
+routers:
+  R-CORE:
+    host: 10.255.255.1
+    interfaces:
+      - name: GigabitEthernet0/0
+        description: P2P_Link_to_R-EDGE
+        ip: 10.0.0.2
+        mask: 255.255.255.252
+      - name: GigabitEthernet0/1
+        description: P2P_Link_to_SW-CORE
+        ip: 10.0.0.5
+        mask: 255.255.255.252
+      - name: Loopback0
+        description: Management_and_Router_ID
+        ip: 10.255.255.1
+        mask: 255.255.255.255
+    ospf:
+      process: 1
+      router_id: 2.2.2.2
+      networks:
+        - net: 10.0.0.0
+          wildcard: 0.0.0.3
+          area: 0
+        - net: 10.0.0.4
+          wildcard: 0.0.0.3
+          area: 0
+        - net: 10.255.255.1
+          wildcard: 0.0.0.0
+          area: 0
+
+  R-EDGE:
+    host: 10.255.255.2
+    interfaces:
+      - name: GigabitEthernet0/0
+        description: WAN_Connection_to_Internet
+        ip: dhcp
+        nat: outside
+      - name: GigabitEthernet0/1
+        description: P2P_Link_to_R-CORE
+        ip: 10.0.0.1
+        mask: 255.255.255.252
+        nat: inside
+      - name: Loopback0
+        description: Management_and_Router_ID
+        ip: 10.255.255.2
+        mask: 255.255.255.255
+    ospf:
+      process: 1
+      router_id: 3.3.3.3
+      default_information_originate: true
+      networks:
+        - net: 10.0.0.0
+          wildcard: 0.0.0.3
+          area: 0
+        - net: 10.255.255.2
+          wildcard: 0.0.0.0
+          area: 0
+    nat:
+      acl_name: NAT_PERMITTED_VLANS
+      overload_interface: GigabitEthernet0/0
+      acl_permits:
+        - "permit 10.10.10.0 0.0.0.255"
+        - "permit 10.10.20.0 0.0.0.255"
+        - "permit 10.10.30.0 0.0.0.255"
+        - "permit 10.10.40.0 0.0.0.255"
+        - "permit 10.99.99.0 0.0.0.255"
+
+# Switch definitions specifying management IP host addresses across network layers
+switches:
+  SW-CORE:
+    host: 10.99.99.1
+  SW-D-DEIE:
+    host: 10.99.99.11
+  SW-D-DCEE:
+    host: 10.99.99.12
+  SW-D-DMME:
+    host: 10.99.99.13
+  SW-A-DEIE:
+    host: 10.99.99.21
+  SW-A-DCEE:
+    host: 10.99.99.22
+  SW-A-DMME:
+    host: 10.99.99.23
+  SW-A-DIS:
+    host: 10.99.99.24
