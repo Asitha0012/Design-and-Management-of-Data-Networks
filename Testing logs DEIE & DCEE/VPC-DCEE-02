@@ -1,0 +1,41 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.12 23:10:40 =~=~=~=~=~=~=~=~=~=~=~=
+ip 10.10.20.52 255.255.255.0 10.10.20.1
+Checking for duplicate address...
+PC4 : 10.10.20.52 255.255.255.0 gateway 10.10.20.1
+
+PC4> show ip
+
+NAME        : PC4[1]
+IP/MASK     : 10.10.20.52/24
+GATEWAY     : 10.10.20.1
+DNS         : 
+MAC         : 00:50:79:66:68:03
+LPORT       : 20204
+RHOST:PORT  : 127.0.0.1:20205
+MTU         : 1500
+
+PC4> ping 10.10.20.52 1
+
+84 bytes from 10.10.20.51 icmp_seq=1 ttl=64 time=15.465 ms
+84 bytes from 10.10.20.51 icmp_seq=2 ttl=64 time=10.900 ms
+84 bytes from 10.10.20.51 icmp_seq=3 ttl=64 time=10.992 ms
+84 bytes from 10.10.20.51 icmp_seq=4 ttl=64 time=14.090 ms
+84 bytes from 10.10.20.51 icmp_seq=5 ttl=64 time=17.283 ms
+
+PC4> ping 10.10.20.520.52 10.52
+
+10.10.10.52 icmp_seq=1 timeout
+84 bytes from 10.10.10.52 icmp_seq=2 ttl=63 time=51.953 ms
+84 bytes from 10.10.10.52 icmp_seq=3 ttl=63 time=67.205 ms
+84 bytes from 10.10.10.52 icmp_seq=4 ttl=63 time=75.957 ms
+84 bytes from 10.10.10.52 icmp_seq=5 ttl=63 time=54.283 ms
+
+PC4> ping 10.10.10.522 1
+
+10.10.10.51 icmp_seq=1 timeout
+84 bytes from 10.10.10.51 icmp_seq=2 ttl=63 time=68.087 ms
+84 bytes from 10.10.10.51 icmp_seq=3 ttl=63 time=60.868 ms
+84 bytes from 10.10.10.51 icmp_seq=4 ttl=63 time=105.489 ms
+84 bytes from 10.10.10.51 icmp_seq=5 ttl=63 time=53.125 ms
+
+PC4> 

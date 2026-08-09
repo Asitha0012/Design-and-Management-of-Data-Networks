@@ -1,0 +1,77 @@
+
+VPC-DEIE-01> clear ip
+IPv4 address/mask, gateway, DNS, and DHCP cleared
+
+VPC-DEIE-01>
+VPC-DEIE-01> clear ip
+IPv4 address/mask, gateway, DNS, and DHCP cleared
+
+VPC-DEIE-01> show ip
+
+NAME        : VPC-DEIE-01[1]
+IP/MASK     : 0.0.0.0/0
+GATEWAY     : 0.0.0.0
+DNS         :
+MAC         : 00:50:79:66:68:06
+LPORT       : 20326
+RHOST:PORT  : 127.0.0.1:20327
+MTU         : 1500
+
+VPC-DEIE-01> ip dhcp
+DDD
+Can't find dhcp server
+
+VPC-DEIE-01>
+VPC-DEIE-01> ip dhcp
+DDORA IP 10.10.10.183/24 GW 10.10.10.1
+
+VPC-DEIE-01> show ip
+
+NAME        : VPC-DEIE-01[1]
+IP/MASK     : 10.10.10.183/24
+GATEWAY     : 10.10.10.1
+DNS         : 10.10.40.20
+DHCP SERVER : 10.10.40.20
+DHCP LEASE  : 43098, 43200/21600/37800
+DOMAIN NAME : foe.uor.lk
+MAC         : 00:50:79:66:68:06
+LPORT       : 20326
+RHOST:PORT  : 127.0.0.1:20327
+MTU         : 1500
+
+VPC-DEIE-01>
+VPC-DEIE-01> ping 10.10.10.1
+
+84 bytes from 10.10.10.1 icmp_seq=1 ttl=255 time=12.080 ms
+84 bytes from 10.10.10.1 icmp_seq=2 ttl=255 time=11.831 ms
+84 bytes from 10.10.10.1 icmp_seq=3 ttl=255 time=20.697 ms
+84 bytes from 10.10.10.1 icmp_seq=4 ttl=255 time=17.181 ms
+^C
+VPC-DEIE-01> ping 10.10.40.20
+
+84 bytes from 10.10.40.20 icmp_seq=1 ttl=63 time=32.915 ms
+84 bytes from 10.10.40.20 icmp_seq=2 ttl=63 time=19.697 ms
+84 bytes from 10.10.40.20 icmp_seq=3 ttl=63 time=16.198 ms
+84 bytes from 10.10.40.20 icmp_seq=4 ttl=63 time=16.961 ms
+^C
+VPC-DEIE-01>
+VPC-DEIE-01>
+VPC-DEIE-01>
+VPC-DEIE-01>
+VPC-DEIE-01>
+VPC-DEIE-01>
+VPC-DEIE-01>
+VPC-DEIE-01>
+VPC-DEIE-01> ping 10.10.40.20
+
+84 bytes from 10.10.40.20 icmp_seq=1 ttl=63 time=25.871 ms
+84 bytes from 10.10.40.20 icmp_seq=2 ttl=63 time=20.495 ms
+84 bytes from 10.10.40.20 icmp_seq=3 ttl=63 time=22.591 ms
+84 bytes from 10.10.40.20 icmp_seq=4 ttl=63 time=15.718 ms
+84 bytes from 10.10.40.20 icmp_seq=5 ttl=63 time=31.406 ms
+
+VPC-DEIE-01> save
+Saving startup configuration to startup.vpc
+.  done
+
+VPC-DEIE-01>

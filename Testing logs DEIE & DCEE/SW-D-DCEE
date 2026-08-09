@@ -1,0 +1,56 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.12 22:57:11 =~=~=~=~=~=~=~=~=~=~=~=
+show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0     unassigned      YES unset  up                    up      
+GigabitEthernet0/1     unassigned      YES unset  up                    up      
+GigabitEthernet0/2     unassigned      YES unset  down                  down    
+GigabitEthernet0/3     unassigned      YES unset  down                  down    
+GigabitEthernet1/0     unassigned      YES unset  down                  down    
+GigabitEthernet1/1     unassigned      YES unset  down                  down    
+GigabitEthernet1/2     unassigned      YES unset  down                  down    
+GigabitEthernet1/3     unassigned      YES unset  down                  down    
+GigabitEthernet2/0     unassigned      YES unset  down                  down    
+GigabitEthernet2/1     unassigned      YES unset  down                  down    
+GigabitEthernet2/2     unassigned      YES unset  down                  down    
+GigabitEthernet2/3     unassigned      YES unset  down                  down    
+GigabitEthernet3/0     unassigned      YES unset  down                  down    
+GigabitEthernet3/1     unassigned      YES unset  down                  down    
+GigabitEthernet3/2     unassigned      YES unset  down                  down    
+GigabitEthernet3/3     unassigned      YES unset  down                  down    
+Vlan99                 10.99.99.12     YES NVRAM  up                    up      
+SW-D-DCEE#show vlan brief
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Gi0/2, Gi0/3, Gi1/0, Gi1/1
+                                                Gi1/2, Gi1/3, Gi2/0, Gi2/1
+                                                Gi2/2, Gi2/3, Gi3/0, Gi3/1
+                                                Gi3/2, Gi3/3
+10   VLAN0010                         active    
+20   VLAN0020                         active    
+30   VLAN0030                         active    
+40   VLAN0040                         active    
+99   VLAN0099                         active    
+100  VLAN0100                         active    
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 
+SW-D-DCEE#show interfaces trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Gi0/0       on               802.1q         trunking      100
+Gi0/1       on               802.1q         trunking      100
+
+Port        Vlans allowed on trunk
+Gi0/0       10,20,30,40,99
+Gi0/1       10,20,30,40,99
+
+Port        Vlans allowed and active in management domain
+Gi0/0       10,20,30,40,99
+Gi0/1       10,20,30,40,99
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gi0/0       10,20,30,40,99
+Gi0/1       10,20,30,40,99
+SW-D-DCEE#show running-config                   

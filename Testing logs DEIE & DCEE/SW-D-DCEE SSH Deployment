@@ -1,0 +1,42 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.07.12 23:26:12 =~=~=~=~=~=~=~=~=~=~=~=
+
+IOSv - Cisco Systems Confidential -
+
+Supplemental End User License Restrictions
+
+This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+
+SW-D-DCEE>
+SW-D-DCEE>
+SW-D-DCEE>SSH Deployment              enable
+SW-D-DCEE#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW-D-DCEE(config)#ip domain-name campus.local
+SW-D-DCEE(config)#username admin privilege 15 password adminpass
+SW-D-DCEE(config)#crypto key generate rsa modulus 2048
+The name for the keys will be: SW-D-DCEE.campus.local
+
+% The key modulus size is 2048 bits
+% Generating 2048 bit RSA keys, keys will be non-exportable...
+[OK] (elapsed time was 1 seconds)
+
+SW-D-DCEE(config)#line vty 0 4
+SW-D-DCEE(config-line)# login local
+SW-D-DCEE(config-line)# transport input ssh
+SW-D-DCEE(config-line)#exit
+SW-D-DCEE(config)#line vty 5 15
+SW-D-DCEE(config-line)# login local
+SW-D-DCEE(config-line)# transport input ssh
+SW-D-DCEE(config-line)#end
+SW-D-DCEE#write memory
+Building configuration...
+
+*Jul 12 17:50:52.230: %SYS-5-CONFIG_I: Configured from console by consoleCompressed configuration from 3737 bytes to 2033 bytes[OK]
+*Jul 12 17:51:03.030: %GRUB-5-CONFIG_WRITING: GRUB configuration is being updated on disk. Please wait...
+-Traceback= 24191D8z 9605E5z 989BDEz 989900z 98970Dz 985895z 9864CBz 98645Fz 98BD9Dz 98BCB4z 98CDF8z 95B753z 90AFD1z 93F0F3z 93E2A7z 93B616z - Process "Exec", CPU hog, PC 0x0098DB17
+
+SW-D-DCEE#
+*Jul 12 17:51:04.250: %GRUB-5-CONFIG_WRITTEN: GRUB configuration was written to disk successfully.
+*Jul 12 17:51:06.660: %SYS-3-CPUHOG: Task is running for (1998)msecs, more than (2000)msecs (0/0),process = Exec.
